@@ -1,0 +1,25 @@
+<h1>Patient Search</h1>
+
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+
+	<div class="field">
+		<%= s.label :firstName %>
+		<%= s.text_field :firstName %>
+	</div>
+
+	<div class="field">
+		<%= s.label :surName %>
+		<%= s.text_field :surName %>
+	</div>
+
+	
+
+	<div class="actions">
+		<%= s.submit "Search", class: "pure-button pure-button-primary" %>
+	</div>
+
+<% end %>
+
+<div>
+	<%= link_to 'Back', patients_path %>
+</div>

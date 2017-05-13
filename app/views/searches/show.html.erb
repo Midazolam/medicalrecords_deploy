@@ -1,0 +1,19 @@
+<h1> Search Results</h1>
+
+<div>
+	<%= link_to 'Back', new_search_path %>
+</div>
+
+<% if @search.search_patients.empty? %>
+	<div><p>No records matched your searach!</p></div>
+<% else %>
+	<% @search.search_patients.each do |c| %>
+		<br>
+		<div class="div">
+			<h3><%=c.firstName %> <%=c.surName%></h3>
+			<p><%= c.diagnosis %></p>
+			<p><%= c.location %></p>
+			<%= link_to 'Show', c %>
+		</div>
+	<% end %>
+<% end %>
