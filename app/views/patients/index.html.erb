@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<% if user_signed_in? %>
+
 <h1>Patients</h1>
 
 <%= link_to 'Patient Search', new_search_path %>
@@ -9,21 +11,27 @@
     <%= submit_tag "Search by Surname" %>
   <% end %>
 
-<table>
-  <thead>
-    <tr>
+
+<br>
+<br>
+
+
+
+<div class="panel-body">
+  <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+    <thead>
+      <tr>
       <th>Firstname</th>
       <th>Surname</th>
-      <th>Dob</th>
+      <th>D.O.B</th>
       <th>Diagnosis</th>
       <th>Location</th>
-      <th>Admissionnote</th>
+      <th>Admission Note</th>
       <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @patients.each do |patient| %>
+      </tr>
+    </thead>
+    <tbody>
+      <% @patients.each do |patient| %>
       <tr>
         <td><%= patient.firstName %></td>
         <td><%= patient.surName %></td>
@@ -37,8 +45,22 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+
+  </table>
+
+</div>
 
 <br>
+<button>
+  <%= link_to 'Create New Patient', new_patient_path %>
+</button>
 
-<%= link_to 'New Patient', new_patient_path %>
+
+
+
+
+<% else %>
+
+<h1>Welcome to Medical Records</h1>
+<h3>Please sign up or log back in to continue</h3>
+<% end %>

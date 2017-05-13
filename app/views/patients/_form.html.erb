@@ -10,34 +10,33 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= form.label :firstName %>
+    <label>First Name:</label><br/>
     <%= form.text_field :firstName, id: :patient_firstName %>
   </div>
 
   <div class="field">
-    <%= form.label :surName %>
+    <label>Surname:</label><br/>
     <%= form.text_field :surName, id: :patient_surName %>
   </div>
 
   <div class="field">
-    <%= form.label :dob %>
-    <%= form.date_select :dob, id: :patient_dob %>
+    <label>Date of Birth:</label><br/>
+    <%= form.date_select :dob, id: :patient_dob, :start_year=>1900,:end_year=>2020  %>
   </div>
 
   <div class="field">
-    <%= form.label :diagnosis %>
+    <label>Diagnosis:</label><br/>
     <%= form.text_field :diagnosis, id: :patient_diagnosis %>
   </div>
 
   <div class="field">
-    <%= form.label :location %>
+    <label>Location:</label><br/>
     <%= form.text_field :location, id: :patient_location %>
   </div>
 
   <div class="field">
-    <%= form.label :admissionNote %>
+    <label>Admission Note:</label><br/>
     <%= form.text_area :admissionNote, id: :patient_admissionNote %>
   </div>
 
