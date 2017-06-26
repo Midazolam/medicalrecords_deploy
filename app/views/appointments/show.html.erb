@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @appointment.firstname %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @appointment.surname %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @appointment.dob %>
+</p>
+
+<p>
+  <strong>Loc:</strong>
+  <%= @appointment.loc %>
+</p>
+
+<p>
+  <strong>Dateap:</strong>
+  <%= @appointment.dateAp %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @appointment.note %>
+</p>
+
+<p>
+  <strong>Text1:</strong>
+  <%= @appointment.text1 %>
+</p>
+
+<p>
+  <strong>Ext2:</strong>
+  <%= @appointment.ext2 %>
+</p>
+
+<p>
+  <strong>Ext3:</strong>
+  <%= @appointment.ext3 %>
+</p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstname: MyString
+  surname: MyString
+  dob: 2017-06-14
+  loc: MyString
+  dateAp: 2017-06-14 12:15:22
+  note: MyText
+  text1: MyString
+  ext2: MyString
+  ext3: MyString
+
+two:
+  firstname: MyString
+  surname: MyString
+  dob: 2017-06-14
+  loc: MyString
+  dateAp: 2017-06-14 12:15:22
+  note: MyText
+  text1: MyString
+  ext2: MyString
+  ext3: MyString

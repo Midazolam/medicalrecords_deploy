@@ -10,37 +10,38 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
+  <div class="form-group">
     <label>First Name:</label><br/>
-    <%= form.text_field :firstName, id: :patient_firstName %>
+    <%= form.text_field :firstName, class: "form-control", id: :patient_firstName %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <label>Surname:</label><br/>
-    <%= form.text_field :surName, id: :patient_surName %>
+    <%= form.text_field :surName, class: "form-control", id: :patient_surName %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <label>Date of Birth:</label><br/>
-    <%= form.date_select :dob, id: :patient_dob, :start_year=>1900,:end_year=>2020  %>
+    <%= form.date_select :dob, class: "form-control", id: :patient_dob, :start_year=>1900,:end_year=>2020  %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <label>Diagnosis:</label><br/>
-    <%= form.text_field :diagnosis, id: :patient_diagnosis %>
+    <%= form.text_field :diagnosis, class: "form-control", id: :patient_diagnosis %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <label>Location:</label><br/>
-    <%= form.text_field :location, id: :patient_location %>
+    <%= form.text_field :location, class: "form-control", id: :patient_location %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <label>Admission Note:</label><br/>
-    <%= form.text_area :admissionNote, id: :patient_admissionNote %>
+    <%= form.text_area :admissionNote, class: "form-control", id: :patient_admissionNote %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -8,27 +8,24 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-  	<div id="wrapper">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            
-            <a class="navbar-brand" href="index.html">Medical Records</a>
-        </div>
-
-        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            
-        	<% if user_signed_in? %>
-            <ul class="nav navbar-nav side-nav">
+ <body>
+    <header class="navbar navbar-default" role="navigation">
+      <div class="navbar-inner">
+        <div id="logo" class="navbar-brand"><%= link_to "Medical Records Manager", root_path %></div>
+        <nav class="collapse navbar-collapse navbar-ex1-collapse">
+          <% if user_signed_in? %>
+            <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <%= link_to('View Patients', patients_path)  %>
+                    <%= link_to('All Patients', patients_path)  %>
                 </li>
                 <li>
                     <%= link_to('Search Patients', new_search_path)  %>
+                </li>
+                <li>
+                    <%= link_to('Appointment Manager', appointments_path)  %>
+                </li>
+                <li>
+                    <%= link_to('Manage Account', edit_user_registration_path) %>
                 </li>
                 <li>
                     <%= link_to('Log Out', destroy_user_session_path, :method => :delete) %>
@@ -37,8 +34,8 @@
             </ul>
 
             <% else %>
-            <ul class="nav navbar-nav side-nav">
-                <li class="active">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
                     <%= link_to('Sign Up', new_user_registration_path)  %>
                 </li>
                 <li>
@@ -46,11 +43,12 @@
                 </li>
             </ul>
 
-            <% end %>
+             <% end %>
+        </nav>
         </div>
-        <!-- /.navbar-collapse -->
-    </nav>
-</br></br></br>
+      </div>
+    </header>
+
    
     <div id="wrapper">
         <div class="container-fluid">
